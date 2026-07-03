@@ -4,7 +4,9 @@
 $font: "Raleway", sans-serif;
 
 $banner-bg: rgba(37, 43, 73, 0.5);
+$primary-bg: #FFFFFF;
 $primary-color: #FFFFFF;
+$secondary-color: #000000;
 $btn-bg: #FF4343;
 $header-border-color: #BABBC5;
 
@@ -38,16 +40,27 @@ body {
 }
 
 .container {
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
 
     @media screen and (min-width: $desktop) {
         max-width: 1200px;
+        padding: 0 15px;
     }
 }
 
 a {
     text-decoration: none;
+}
+
+.button {
+    background-color: $btn-bg;
+    color: $primary-color;
+    font-family: $font;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: none;
 }
 
 .banner-wrapper {
@@ -57,9 +70,8 @@ a {
     background-size: cover;
     
     position: relative;
-}
 
-.banner-wrapper::before {
+    &::before {
     content: '';
     display: block;
     background-color: $banner-bg;
@@ -69,6 +81,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    }   
 }
 
 .header {
@@ -137,14 +150,14 @@ a {
 }
 
 .banner {
-    padding: 106px 20px 52px;
+    padding: 106px 0 52px;
 
     @media screen and (min-width: $tablet) {
-        padding: 257px 15px 127px;
+        padding: 257px 0 127px;
     }
 
     @media screen and (min-width: $desktop) {
-        padding: 230px 15px 120px;
+        padding: 230px 0 120px;
     }
 
     &__container {
@@ -185,15 +198,8 @@ a {
     }
     &__btn {
         min-width: 279px;
-        background-color: $btn-bg;
-        color: $primary-color;
-        font-family: $font;
-        text-align: center;
-        @include font-size (24px, 28px, 900);
-        text-transform: uppercase;
         padding: 14px 0 16px;
-        border: none;
-        white-space: nowrap;
+        @include font-size (24px, 28px, 900);
 
         @media screen and (min-width: $tablet) {
             min-width: 314px;
@@ -202,6 +208,70 @@ a {
 
         @media screen and (min-width: $tablet) {
             min-width: 370px;
+        }
+    }
+}
+
+.action {
+    padding: 53px 0;
+    background-color: $primary-color;
+
+    @media screen and (min-width: $tablet) {
+            padding: 127.5px 0;
+        }
+
+    @media screen and (min-width: $desktop) {
+            padding: 170px 0 170.5px;
+        }
+
+    &__container {
+        text-align: center;
+    }
+    &__title {
+        color: $secondary-color;
+        @include font-size(18px, 21px, 500);
+        text-transform: capitalize;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: $tablet) {
+            @include font-size(24px, 28px, 500);
+            margin-bottom: 20.5px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(30px, 35px, 500);
+            margin-bottom: 22px;
+        }
+    }
+    &__text {
+        color: $secondary-color;
+        @include font-size(13px, 15px, 700);
+        text-transform: capitalize;
+        margin-bottom: 12px;
+
+        @media screen and (min-width: $tablet) {
+            @include font-size(14px, 16px, 700);
+            margin-bottom: 45.5px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 21px, 700);
+            margin-bottom: 50px;
+        }
+    }
+    &__btn {
+        min-width: 280px;
+        padding: 28px 0;
+        @include font-size (18px, 21px, 900);
+
+        @media screen and (min-width: $tablet) {
+            min-width: 565.5px;
+            padding: 27.5px 0 29px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            min-width: 370.5px;
+            padding: 23.5px 0 26px;
         }
     }
 }
