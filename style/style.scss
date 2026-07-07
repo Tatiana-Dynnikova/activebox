@@ -3,7 +3,7 @@
 
 $font: "Raleway", sans-serif;
 
-$banner-bg: rgba(37, 43, 73, 0.5);
+$banner-bg: rgba(37, 43, 73, 0.8);
 $primary-bg: #FFFFFF;
 $btn-bg: #FF4343;
 $project-bg: rgba(255, 67, 67, 0.8);
@@ -15,7 +15,6 @@ $benefits-text-color: #6C7279;
 
 $header-border-color: #BABBC5;
 
-$mobile:321px;
 $tablet: 768px;
 $desktop: 1025px;
 
@@ -54,10 +53,6 @@ body {
     }
 }
 
-a {
-    text-decoration: none;
-}
-
 .button {
     background-color: $btn-bg;
     color: $primary-color;
@@ -68,25 +63,14 @@ a {
     border: none;
 }
 
-// Maybe it's more correctly?
-// .benefits svg {
-//     @media screen and (min-width: $tablet) {
-//         width: 85px;
-//         height: 85px;
-//     }
-//     @media screen and (min-width: $desktop) {
-//         width: 100px;
-//         height: 100px;
-//     }
-// } 
-
-.banner-wrapper {
+.banner-wrapper {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
     background-image: url(/media/bg.png); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     
     position: relative;
+    max-width: 100%;
 
     &::before {
     content: '';
@@ -102,33 +86,45 @@ a {
 }
 
 .header {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    &__container {
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
 
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        @media screen and (min-width: $tablet) {
-            padding: 38px 20px 36px;
-            border-bottom: 1px solid $header-border-color;
-        }
-
-        @media screen and (min-width: $desktop) {
-            padding: 38px 15px 36px;
-            left: calc(50% - 600px); //center header
-            //Как сделать линию на всю секцию header ? 
-        }
+    @media screen and (min-width: $tablet) {
+        padding: 38px 0 36px;
+        border-bottom: 1px solid $header-border-color;
     }
 
-    
+    @media screen and (min-width: $desktop) {
+        padding: 38px 0 36px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__logo {
         @extend %flex-center;
         //Нужно увеличить для tablet и desktop
+
+        @media screen and (min-width: $tablet) {
+            svg {
+                width: 181px;
+                height: max-content;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            svg {
+                width: 184px;
+                height: max-content;
+            }
+            
+        }
     }
     &__toggle {
         @extend %flex-center;
@@ -143,21 +139,22 @@ a {
     display: none;
 
     @media screen and (min-width: $tablet) {
-        display: block;
         display: flex;
         column-gap: 25px;
     }
 
     @media screen and (min-width: $desktop) {
-        @include font-size (13px, 13px, 700);
         column-gap: 40px;
     }
 
     &__link {
+        color: $primary-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        @extend %flex-center;
+
         @media screen and (min-width: $tablet) {
-            color: $primary-color;
             @include font-size (12px, 14px, 700);
-            text-transform: uppercase;
         }
 
         @media screen and (min-width: $desktop) {
@@ -231,6 +228,8 @@ a {
 
 .benefits {
     padding: 60px 0;
+    padding: 20px 0;
+    text-align: center;
 
     @media screen and (min-width: $tablet) {
         padding: 80px 0;
@@ -241,29 +240,34 @@ a {
     }
 
     &__container {
-        text-align: center;
-
+        width: 100%;
         @media screen and (min-width: $tablet) {
             display: grid;
-            gap: 49px 20px;
-            grid-template-rows: 1fr 1fr;
             grid-template-columns: repeat(3, 1fr); 
+            gap: 50px 20px;
             //не вмещаются - вернуться после fix всех элементов
             }
+
+        @media screen and (min-width: $desktop) {
+            display: grid;
+            gap: 88.5px 31px;
+            grid-template-columns: repeat(3, 1fr); 
+            //не вмещаются - вернуться после fix всех элементов
+            }    
         }
     
     &__item {
-        min-width: 278px;
+        width: 100%;
         margin-bottom: 42px;
 
         @media screen and (min-width: $tablet) {
             min-width: 315px;
-            margin-bottom: none;
+            margin-bottom: 0;
         }
 
         @media screen and (min-width: $desktop) {
             min-width: 370px;
-            margin-bottom: none;
+            margin-bottom: 0;
         }
     }
     &__wrapper-item {
@@ -272,42 +276,21 @@ a {
 
         @media screen and (min-width: $tablet) {
             margin-bottom: 44.5px;
+            svg {
+                width: 85px;
+                height: 85px;
+            }
         }
 
         @media screen and (min-width: $desktop) {
             margin-bottom: 51px;
+            svg {
+                width: 100px;
+                height: 100px;
+            }
         }
     }
-    &__svg_mobile {
-        @media screen and (min-width: $tablet) {
-            display: none;
-        }
-        @media screen and (min-width: $desktop) {
-            display: none;
-        }
-    }
-    &__svg_tablet {
-        @media screen and (min-width: $mobile) {
-            display: none;
-        }
-        @media screen and (min-width: $tablet) {
-            display: block;
-        }
-        @media screen and (min-width: $desktop) {
-            display: none;
-        }
-    }
-    &__svg_desktop {
-        @media screen and (min-width: $mobile) {
-            display: none;
-        }
-        @media screen and (min-width: $tablet) {
-            display: none;
-        }
-        @media screen and (min-width: $desktop) {
-            display: block;
-        }       
-    }
+    
     &__title {
         @include font-size(18px, 21px, 900);
         color: $benefits-title-color;
@@ -404,10 +387,11 @@ a {
 }
 
 
-
 .action {
     padding: 53px 0;
     background-color: $primary-color;
+    text-align: center;
+
 
     @media screen and (min-width: $tablet) {
             padding: 127.5px 0;
@@ -417,9 +401,9 @@ a {
             padding: 170px 0 170.5px;
         }
 
-    &__container {
-        text-align: center;
-    }
+    // &__container {
+    // }
+
     &__title {
         color: $secondary-color;
         @include font-size(18px, 21px, 500);
