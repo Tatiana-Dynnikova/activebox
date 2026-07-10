@@ -12,6 +12,11 @@ $primary-color: #FFFFFF;
 $secondary-color: #000000;
 $benefits-title-color: #2D3033;
 $benefits-text-color: #6C7279;
+$card-name-color: #2D3033;
+$card-position-color: #FF4343;
+$card-text-color: #6C7279;
+$card-border-color: #C6CBCD;
+$card-color-hover: red;
 
 $header-border-color: #BABBC5;
 
@@ -48,8 +53,7 @@ body {
     margin: 0 auto;
 
     @media screen and (min-width: $desktop) {
-        max-width: 1200px;
-        padding: 0 15px;
+        max-width: 1210px;
     }
 }
 
@@ -228,7 +232,6 @@ body {
 
 .benefits {
     padding: 60px 0;
-    padding: 20px 0;
     text-align: center;
 
     @media screen and (min-width: $tablet) {
@@ -240,12 +243,12 @@ body {
     }
 
     &__container {
-        width: 100%;
+        display: grid;
+        row-gap: 41.5px;
+
         @media screen and (min-width: $tablet) {
-            display: grid;
             grid-template-columns: repeat(3, 1fr); 
             gap: 50px 20px;
-            //не вмещаются - вернуться после fix всех элементов
             }
 
         @media screen and (min-width: $desktop) {
@@ -256,20 +259,6 @@ body {
             }    
         }
     
-    &__item {
-        width: 100%;
-        margin-bottom: 42px;
-
-        @media screen and (min-width: $tablet) {
-            min-width: 315px;
-            margin-bottom: 0;
-        }
-
-        @media screen and (min-width: $desktop) {
-            min-width: 370px;
-            margin-bottom: 0;
-        }
-    }
     &__wrapper-item {
         @extend %flex-center;
         margin-bottom: 37px;
@@ -310,10 +299,6 @@ body {
     &__text {
         @include font-size(14px, 16px);
         color: $benefits-text-color;
-
-        @media screen and (min-width: $tablet) {
-            @include font-size(14px, 100%);
-        }
 
         @media screen and (min-width: $desktop) {
             @include font-size(18px, 21px);
@@ -386,12 +371,124 @@ body {
     }
 }
 
+.cards {
+    padding: 50px 0;
+
+    @media screen and (min-width: $tablet) {
+        padding: 80px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 100px 0 ;
+    }
+
+    &__container {
+        display: grid;
+        row-gap: 49.5px;
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 25px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            column-gap: 30px;
+        }
+    }
+}
+
+.card {
+    &__image {
+        width: 100%;
+        aspect-ratio: 280 / 227;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 25px;
+
+        @media screen and (min-width: $tablet) {
+            aspect-ratio: 1 / 1;
+        }
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 30px;
+        }
+    }
+    &__name {
+        text-transform: capitalize;
+        @include font-size(18px, 21px, 700);
+        color: $card-name-color;
+        margin-bottom: 5px;
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(24px, 28px, 700);
+        }
+    }
+    &__position {
+        text-transform: uppercase;
+        @include font-size(14px, 16px);
+        color: $card-position-color;
+        margin-bottom: 38.5px;
+        white-space: nowrap;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 22.5px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 21px);
+            margin-bottom: 18px;
+        }
+    }
+
+    &__text {
+        @include font-size(14px, 16px);
+        color: $card-text-color;
+        margin-bottom: 55px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 39px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 21px);
+            margin-bottom: 37.5px;
+        }
+    }
+    &__wrapper-icon {
+        display: flex;
+        column-gap: 6px;
+    }
+    &__link {
+        text-decoration: none;
+        @extend %flex-center;
+        width: 39.5px;
+        height: 39.5px;
+        border: 1px solid $card-border-color;
+        transition: all .3s linear;
+        
+        @media screen and (min-width: $tablet) {
+            width: 33px;
+            height: 33px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 39px;
+            height: 39px;
+        }
+
+        &:hover {
+            border-color: $card-color-hover;
+            path {
+                fill: $card-color-hover;
+            }
+        }
+    }
+
+}
 
 .action {
     padding: 53px 0;
     background-color: $primary-color;
     text-align: center;
-
 
     @media screen and (min-width: $tablet) {
             padding: 127.5px 0;
@@ -452,6 +549,4 @@ body {
         }
     }
 }
-
-
 

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-.project__content, .benefits__wrapper-item, .nav__link, .header__toggle, .header__logo {
+.card__link, .project__content, .benefits__wrapper-item, .nav__link, .header__toggle, .header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +21,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .container {
-    max-width: 1200px;
-    padding: 0 15px;
+    max-width: 1210px;
   }
 }
 
@@ -219,7 +218,6 @@ body {
 
 .benefits {
   padding: 60px 0;
-  padding: 20px 0;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -233,11 +231,11 @@ body {
   }
 }
 .benefits__container {
-  width: 100%;
+  display: grid;
+  row-gap: 41.5px;
 }
 @media screen and (min-width: 768px) {
   .benefits__container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 20px;
   }
@@ -247,22 +245,6 @@ body {
     display: grid;
     gap: 88.5px 31px;
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-.benefits__item {
-  width: 100%;
-  margin-bottom: 42px;
-}
-@media screen and (min-width: 768px) {
-  .benefits__item {
-    min-width: 315px;
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .benefits__item {
-    min-width: 370px;
-    margin-bottom: 0;
   }
 }
 .benefits__wrapper-item {
@@ -315,13 +297,6 @@ body {
   line-height: 16px;
   font-weight: 400;
   color: #6C7279;
-}
-@media screen and (min-width: 768px) {
-  .benefits__text {
-    font-size: 14px;
-    line-height: 100%;
-    font-weight: 400;
-  }
 }
 @media screen and (min-width: 1025px) {
   .benefits__text {
@@ -401,6 +376,144 @@ body {
     line-height: 21px;
     font-weight: 400;
   }
+}
+
+.cards {
+  padding: 50px 0;
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    padding: 80px 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .cards {
+    padding: 100px 0;
+  }
+}
+.cards__container {
+  display: grid;
+  row-gap: 49.5px;
+}
+@media screen and (min-width: 768px) {
+  .cards__container {
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .cards__container {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 280/227;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .card__image {
+    aspect-ratio: 1/1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__image {
+    margin-bottom: 30px;
+  }
+}
+.card__name {
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #2D3033;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1025px) {
+  .card__name {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+}
+.card__position {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #FF4343;
+  margin-bottom: 38.5px;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .card__position {
+    margin-bottom: 22.5px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .card__position {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+}
+.card__text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #6C7279;
+  margin-bottom: 55px;
+}
+@media screen and (min-width: 768px) {
+  .card__text {
+    margin-bottom: 39px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .card__text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 37.5px;
+  }
+}
+.card__wrapper-icon {
+  display: flex;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.card__link {
+  text-decoration: none;
+  width: 39.5px;
+  height: 39.5px;
+  border: 1px solid #C6CBCD;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 768px) {
+  .card__link {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .card__link {
+    width: 39px;
+    height: 39px;
+  }
+}
+.card__link:hover {
+  border-color: red;
+}
+.card__link:hover path {
+  fill: red;
 }
 
 .action {
