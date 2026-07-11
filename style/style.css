@@ -423,7 +423,7 @@ body {
     aspect-ratio: 1/1;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
   .card__image {
     margin-bottom: 30px;
   }
@@ -455,6 +455,9 @@ body {
 @media screen and (min-width: 768px) {
   .card__position {
     margin-bottom: 22.5px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 1025px) {

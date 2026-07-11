@@ -408,7 +408,7 @@ body {
         @media screen and (min-width: $tablet) {
             aspect-ratio: 1 / 1;
         }
-        @media screen and (min-width: $tablet) {
+        @media screen and (min-width: $desktop) {
             margin-bottom: 30px;
         }
     }
@@ -431,6 +431,7 @@ body {
 
         @media screen and (min-width: $tablet) {
             margin-bottom: 22.5px;
+            @include font-size(12px, 14px);
         }
 
         @media screen and (min-width: $desktop) {
