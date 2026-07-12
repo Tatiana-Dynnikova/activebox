@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
-.about__link, .card__link, .project__content, .benefits__wrapper-item, .nav__link, .header__toggle, .header__logo {
+.about__link, .comments__wrapper .swiper-pagination, .card__link, .project__content, .benefits__wrapper-item, .nav__link, .header__toggle, .header__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -523,52 +523,45 @@ body {
 .comments {
   background-color: #5C3249;
   padding-bottom: 95px;
-  margin-bottom: 32.5px;
+  margin-bottom: 23px;
 }
 @media screen and (min-width: 768px) {
   .comments {
     padding-bottom: 0;
-    margin-bottom: 33.5px;
   }
 }
 @media screen and (min-width: 1025px) {
   .comments {
-    margin-bottom: 45px;
+    margin-bottom: 31px;
   }
 }
-.comments .swiper-pagination {
-  bottom: -118px;
-  display: flex;
-  justify-content: center;
+
+.comments__wrapper .swiper-pagination {
+  position: static;
   -moz-column-gap: 20.5px;
        column-gap: 20.5px;
 }
 @media screen and (min-width: 768px) {
-  .comments .swiper-pagination {
+  .comments__wrapper .swiper-pagination {
     -moz-column-gap: 25px;
          column-gap: 25px;
-    bottom: -24px;
   }
 }
-@media screen and (min-width: 1025px) {
-  .comments .swiper-pagination {
-    bottom: -31px;
-  }
-}
-.comments .swiper-pagination-bullet {
+.comments__wrapper .swiper-pagination-bullet {
   width: 9.5px;
   height: 9.5px;
   background-color: transparent;
   border: 1px solid #7E5D6F;
   opacity: 1;
+  margin: 0 !important;
 }
 @media screen and (min-width: 1025px) {
-  .comments .swiper-pagination-bullet {
+  .comments__wrapper .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
   }
 }
-.comments .swiper-pagination-bullet-active {
+.comments__wrapper .swiper-pagination-bullet-active {
   background: #7E5D6F;
   border: 1px solid #7E5D6F;
   opacity: 1;
@@ -635,7 +628,7 @@ body {
     font-size: 39px;
     line-height: 49px;
     font-weight: 400;
-    margin-bottom: 0;
+    margin-bottom: 25px;
   }
 }
 .comment__autor {
@@ -739,15 +732,18 @@ body {
 .about {
   padding: 34px 0;
   background-color: #353C65;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .about {
     padding: 46.5px 0 41px;
+    margin-bottom: 14px;
   }
 }
 @media screen and (min-width: 1025px) {
   .about {
     padding: 71px 0;
+    margin-bottom: 24px;
   }
 }
 .about__container {
@@ -834,16 +830,16 @@ body {
 
 .footer {
   background-color: #2C3154;
-  padding: 30px 0 28px;
+  padding-bottom: 28px;
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 14px 0;
+    padding-bottom: 14px;
   }
 }
 @media screen and (min-width: 1025px) {
   .footer {
-    padding: 24px 0;
+    padding-bottom: 24px;
   }
 }
 .footer__text {
