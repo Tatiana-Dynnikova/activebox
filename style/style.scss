@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 $font: "Raleway", sans-serif;
+$font-swiper: "Cardo", serif;
 
 $banner-bg: rgba(37, 43, 73, 0.8);
 $primary-bg: #FFFFFF;
@@ -17,6 +19,13 @@ $card-position-color: #FF4343;
 $card-text-color: #6C7279;
 $card-border-color: #C6CBCD;
 $card-color-hover: red;
+
+$bg-swiper: #5C3249;
+$pagination-color: #7E5D6F;
+$bg-about: #353C65;
+$icon-color-about: #C6CBCD;
+$bg-footer: #2C3154;
+$color-footer: #808080;
 
 $header-border-color: #BABBC5;
 
@@ -486,6 +495,114 @@ body {
 
 }
 
+.comments {
+    background-color: $bg-swiper;
+    padding-bottom: 95px;
+    margin-bottom: 32.5px;
+
+    @media screen and (min-width: $tablet) {
+        padding-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 45px;
+    }
+
+    .swiper-pagination {
+        // position: static;
+        bottom: -118px;
+        display: flex;
+        justify-content: center;
+        column-gap: 20.5px;
+
+        @media screen and (min-width: $tablet) {
+            column-gap: 25px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 9.5px;
+        height: 9.5px;
+        background-color: transparent;
+        border: 1px solid $pagination-color;
+        opacity: 1;
+
+        @media screen and (min-width: $desktop) {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $pagination-color;
+        border: 1px solid $pagination-color;
+        opacity: 1;
+    }
+}
+
+.comment {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 19px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        column-gap: 31px;
+    }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 280/218;
+        object-position: center;
+        object-fit: cover;
+
+        @media screen and (min-width: $tablet) {
+            aspect-ratio: 482/332;
+        }
+
+        @media screen and (min-width: $desktop) {
+            aspect-ratio: 570/490;
+        }
+    }
+    &__blockquote {
+        color: $primary-color;
+    }
+    &__quote {
+        font-family: $font-swiper;
+        font-style: italic;
+        @include font-size(24px, 32px);
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: $tablet) {
+            text-align: unset;
+            margin-bottom: 8px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(39px, 49px);
+            margin-bottom: 0;
+        }
+    }
+    &__autor {
+        @include font-size(12px, 14px, 700);
+        text-transform: uppercase;
+        font-style: normal;
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(13px, 15px, 700);
+        }
+    }
+
+    
+}
+
 .action {
     padding: 53px 0;
     background-color: $primary-color;
@@ -551,3 +668,110 @@ body {
     }
 }
 
+.about {
+    padding: 34px 0;
+    background-color: $bg-about;
+
+    @media screen and (min-width: $tablet) {
+        padding: 46.5px 0 41px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 71px 0;
+    }
+
+    &__container {
+        display: grid;
+        row-gap: 59px;
+
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            row-gap: 30px;
+        }
+    }
+    &__info {
+        color: $primary-color;
+        text-align: center;
+    }
+    &__title {
+        @include font-size(14px, 16px, 700);
+        text-transform: uppercase;
+        margin-bottom: 34px;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 17px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 100%, 700);
+            margin-bottom: 29px;
+        }
+    }
+    &__title_icon {
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 32.5px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 49px;
+        }
+    }
+    &__text {
+        @include font-size(14px, 16px);
+        text-transform: capitalize;
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 100%);
+        }
+    }
+    &__wrapper-icon {
+        display: flex;
+        justify-content: center;
+        column-gap: 16px;
+    }
+    &__link {
+        width: 33px;
+        height: 33px;
+        border: 1px solid $icon-color-about;
+        @extend %flex-center;
+        text-decoration: none;
+
+        @media screen and (min-width: $desktop) {
+            width: 39px;
+            height: 39px;
+        }
+    }
+    
+}
+
+.footer {
+    background-color: $bg-footer;
+    padding: 30px 0 28px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 14px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 24px 0;
+    }
+
+    &__text {
+        color: $color-footer;
+        @include font-size(14px, 16px);
+        text-transform: capitalize;
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            @include font-size(18px, 100%);
+        }
+    }
+
+    &__span {
+        color: $primary-color;
+    }
+}
