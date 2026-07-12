@@ -528,6 +528,7 @@ body {
 @media screen and (min-width: 768px) {
   .comments {
     padding-bottom: 0;
+    margin-bottom: 33.5px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -546,6 +547,12 @@ body {
   .comments .swiper-pagination {
     -moz-column-gap: 25px;
          column-gap: 25px;
+    bottom: -24px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .comments .swiper-pagination {
+    bottom: -31px;
   }
 }
 .comments .swiper-pagination-bullet {

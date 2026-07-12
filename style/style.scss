@@ -502,6 +502,7 @@ body {
 
     @media screen and (min-width: $tablet) {
         padding-bottom: 0;
+        margin-bottom: 33.5px;
     }
 
     @media screen and (min-width: $desktop) {
@@ -517,6 +518,11 @@ body {
 
         @media screen and (min-width: $tablet) {
             column-gap: 25px;
+            bottom: -24px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            bottom: -31px;
         }
     }
 
