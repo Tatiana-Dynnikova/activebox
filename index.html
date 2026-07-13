@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="media/x-icon">
     <title>Activebox</title>
 </head>
 <body>
@@ -290,6 +292,38 @@
         </div>
     </div>
 
+    <div class="comments__wrapper">
+        <div class="comments">
+            <div class="container comments__container">
+            <!-- Slider main container -->
+                <div class="swiper comments__swiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper comments__wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide comment">
+                            <img class="comment__image" src="media/swiper1.jpg" alt="изображение">
+
+                            <blockquote class="comment__blockquote">
+                                <p class="comment__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                                <p class="comment__autor">Susan Sims, Interaction Designer at XYZ</p>
+                            </blockquote>
+                        </div>
+
+                        <div class="swiper-slide comment">
+                            <img class="comment__image" src="media/swiper1.jpg" alt="изображение">
+
+                            <blockquote class="comment__blockquote">
+                                <p class="comment__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+                                <p class="comment__autor">Susan Sims, Interaction Designer at XYZ</p>
+                            </blockquote>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
     <section class="action">
         <div class="container action__container">
             <h2 class="action__title">Are You Ready to Start? Download Now For Free!</h2>
@@ -297,5 +331,61 @@
             <button class="button action__btn">download here</button>
         </div>
     </section>
+
+
+    <footer class="footer">
+        <div class="about">
+            <div class="container about__container">
+                <div class="about__info">
+                    <h3 class="about__title">Location</h3>
+                    <p class="about__text">3481 Melrose Place Beverly Hills, CA 90210</p>
+                </div>
+                <div class="about__info">
+                    <h3 class="about__title about__title_icon">Share with Love</h3>
+                    <div class="about__wrapper-icon">
+                        <a class="about__link" href="#">
+                            <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.15976 18.2784V9.95431H8.96797L9.38539 6.69517H6.15976V4.61923C6.15976 3.67877 6.4218 3.03486 7.77156 3.03486H9.48187V0.129156C8.64971 0.0399752 7.81325 -0.00308549 6.97633 0.000171809C4.49414 0.000171809 2.78992 1.51548 2.78992 4.29728V6.68908H0V9.94822H2.79602V18.2784H6.15976Z" fill="#C6CBCD"/>
+                            </svg>
+                        </a>
+                        <a class="about__link" href="#">
+                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.9085 4.04016C17.9217 4.21789 17.9217 4.39461 17.9217 4.57133C17.9217 9.97953 13.8054 16.2114 6.28266 16.2114C3.965 16.2114 1.81187 15.5401 0 14.3741C0.329062 14.4117 0.645938 14.4249 0.988203 14.4249C2.82952 14.4294 4.6187 13.8137 6.06734 12.677C5.21363 12.6616 4.38605 12.3799 3.70016 11.8714C3.01427 11.3628 2.50431 10.6528 2.24148 9.84039C2.49437 9.87797 2.74828 9.90336 3.01437 9.90336C3.38102 9.90336 3.74969 9.85258 4.09195 9.76422C3.16546 9.57715 2.33236 9.07496 1.7343 8.34304C1.13624 7.61112 0.810157 6.69464 0.811484 5.74945V5.69867C1.35688 6.00234 1.98961 6.19227 2.65992 6.21766C2.09837 5.8445 1.63792 5.33815 1.31964 4.74377C1.00137 4.1494 0.835162 3.48548 0.835859 2.81125C0.835859 2.05156 1.03797 1.35484 1.39242 0.747501C2.42038 2.01197 3.70246 3.04643 5.15565 3.78387C6.60884 4.52131 8.20073 4.9453 9.8282 5.02836C9.76523 4.72367 9.72664 4.40781 9.72664 4.09094C9.72637 3.55363 9.83201 3.02154 10.0375 2.52509C10.243 2.02863 10.5443 1.57754 10.9243 1.19761C11.3042 0.817681 11.7553 0.516355 12.2517 0.310861C12.7482 0.105367 13.2803 -0.000266479 13.8176 5.0483e-07C14.9957 5.0483e-07 16.0591 0.493594 16.8066 1.29188C17.7224 1.11477 18.6007 0.780429 19.4025 0.303672C19.0972 1.24903 18.4577 2.05065 17.6038 2.55836C18.4161 2.46571 19.21 2.2521 19.9591 1.92461C19.3996 2.74026 18.7063 3.45551 17.9085 4.04016Z" fill="#C6CBCD"/>
+                            </svg>
+                        </a>
+                        <a class="about__link" href="#">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.2656 0H1.01562C0.746265 0 0.487936 0.107003 0.29747 0.29747C0.107003 0.487936 0 0.746265 0 1.01562V17.2656C0 17.535 0.107003 17.7933 0.29747 17.9838C0.487936 18.1742 0.746265 18.2812 1.01562 18.2812H17.2656C17.535 18.2812 17.7933 18.1742 17.9838 17.9838C18.1742 17.7933 18.2812 17.535 18.2812 17.2656V1.01562C18.2812 0.746265 18.1742 0.487936 17.9838 0.29747C17.7933 0.107003 17.535 0 17.2656 0ZM5.42242 15.5766H2.70867V6.85242H5.42242V15.5766ZM4.06555 5.66109C3.64858 5.66109 3.24868 5.49545 2.95384 5.20061C2.659 4.90577 2.49336 4.50588 2.49336 4.08891C2.49336 3.67194 2.659 3.27204 2.95384 2.9772C3.24868 2.68236 3.64858 2.51672 4.06555 2.51672C4.48252 2.51672 4.88241 2.68236 5.17725 2.9772C5.47209 3.27204 5.63773 3.67194 5.63773 4.08891C5.63773 4.50588 5.47209 4.90577 5.17725 5.20061C4.88241 5.49545 4.48252 5.66109 4.06555 5.66109ZM15.5777 15.5766H12.867V11.3344C12.867 10.3228 12.8487 9.0218 11.4573 9.0218C10.0455 9.0218 9.83125 10.1248 9.83125 11.2633V15.5777H7.12258V6.85344H9.72258V8.04578H9.76016C10.1207 7.36023 11.0063 6.63711 12.3236 6.63711C15.0698 6.63711 15.5766 8.44289 15.5766 10.793V15.5766H15.5777Z" fill="#C6CBCD"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="about__info">
+                    <h3 class="about__title">About ActiveBox</h3>
+                    <p class="about__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container footer__container">
+            <p class="footer__text">Copyright &copy; 2015 ActiveBox. All Rights Reserved Made with <span class="footer__span">by Kamal Chaneman</span></p>
+        </div>
+    </footer>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.comments__swiper', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+        });
+    </script>
 </body>
 </html>
